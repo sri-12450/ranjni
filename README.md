@@ -1,2 +1,0 @@
-# ranjni
-to do app

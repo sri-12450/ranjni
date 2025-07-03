@@ -1,0 +1,152 @@
+:root {
+    --bg: #f4f7fa;
+    --card: #fff;
+    --text: #333;
+    --primary: #4e91f9;
+    --pending: #facc15;
+    --done: #22c55e;
+  }
+  
+  body.dark {
+    --bg: #1e293b;
+    --card: #334155;
+    --text: #f1f5f9;
+    --primary: #3b82f6;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .app-container {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .theme-toggle:hover {
+    transform: rotate(30deg);
+  }
+  
+  .task-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .task-input-container input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .task-input-container button {
+    padding: 0 20px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .task-input-container button:hover {
+    background: #2563eb;
+  }
+  
+  .task-list {
+    list-style: none;
+  }
+  
+  .task-list li {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .task-list li:hover {
+    transform: scale(1.02);
+  }
+  
+  .task-title {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .task-title.done {
+    text-decoration: line-through;
+    color: #9ca3af;
+  }
+  
+  .badge {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 999px;
+    margin-right: 10px;
+    color: white;
+  }
+  
+  .badge.pending {
+    background: var(--pending);
+  }
+  
+  .badge.done {
+    background: var(--done);
+  }
+  
+  .task-actions button {
+    margin-left: 5px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .task-actions .done-btn {
+    background: var(--done);
+    color: white;
+  }
+  .task-actions .undo-btn {
+    background: #f97316;
+    color: white;
+  }
+  .task-actions .delete-btn {
+    background: #ef4444;
+    color: white;
+  }
+  
